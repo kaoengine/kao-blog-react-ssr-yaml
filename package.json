@@ -6,6 +6,9 @@
   "author": "Khanh Tran",
   "license": "MIT",
   "private": false,
+  "engines": {
+    "node": "16.0.0"
+  },
   "scripts": {
     "build:dev": "webpack --watch --mode=development --devtool=source-map",
     "serve:dev": "nodemon --watch dist/server.js dist/server.js",
@@ -13,7 +16,8 @@
     "serve:prod": "node dist/server.js",
     "lint": "eslint \"**/*.{tsx,ts,js}\"",
     "format": "prettier --write \"**/*.{tsx,ts,js,css,html,json,yml,md}\"",
-    "test": "jest"
+    "test": "jest",
+    "start" : "npm run serve:prod"
   },
   "dependencies": {
     "body-parser": "^1.19.0",
